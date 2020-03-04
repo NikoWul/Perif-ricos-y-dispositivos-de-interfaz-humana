@@ -62,41 +62,33 @@ codigo segment 'code'
 
 		modo_video GRAFICO
 
-		;pintar unos puntos por pantalla
-		pixel 20,10,VERDE    	;puntos verdes
-		pixel 110,90,VERDE
-
 		;pintar una linea horizontal
-		mov cx,300
+		mov cx,200
 		bucle1:
-			pixel cx,40,VERDE
+			pixel cx,50,BLANCO
 			dec cx
 			jnz bucle1
 
-
-		pixel 10,100,ROSA	;puntos rosa
-		pixel 100,10,ROSA
-
 		;pintar una linea vertical
-		mov cx,190
+		mov cx,50
 		bucle2:
-			pixel 100,cx,ROSA
+			pixel 200,cx,BLANCO
 			dec cx
 			jnz bucle2
 
 
-		pixel 70,50,BLANCO    ;puntos blancos
-		pixel 50,70,BLANCO
-
-		;pintar una linea diagonal
-		mov cx,200
-		bucle3:
-			pixel cx,cx,BLANCO
-			dec cx
-			jnz bucle3
 
 
 		pausa_tecla
+
+		pixel 70,50,BLANCO    ;puntos blancos
+		pixel 50,70,BLANCO
+		pixel 60,20,VERDE
+		pixel 50,80,ROSA
+
+
+		pausa_tecla
+
 		modo_video TEXTO
 
 		mov ax,4C00h
